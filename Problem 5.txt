@@ -1,0 +1,17 @@
+Problem 5
+Vowel Substring
+Given a string of lowercase letters in the range ascii[‘a’-‘z’], determine the number of substrings that can be created where every letter is a vowel and every vowel is present at least once. The vowels are [‘a’,’e’,’i’,’o’,’u’]. A substring is a contiguous group of characters in the string.
+For example, string s=’aeioaexaaeuiou’. There is a substring to the left that is made of vowels, ‘aeioae’, which is followed by an ‘x’. Since ‘x’ is not a vowel, it cannot be included in the substring, and this substring does not contain all the vowels. It is not a qualifying substring. Moving to the right, there are four substrings that do qualify: ‘aaeuiou’, ‘aaeuio’, ‘aeuiou’ and ‘aeuio’.
+Function Description
+Complete the function vowelsubstring in the editor below. The function must return an integer that denotes the number of substrings which consist of vowels only where every vowel appears at least once.
+vowelsubstring has the following parameter(s):
+s: a string.
+Constraints
+1<=size_of(s)<=10^5
+s[i]\in ascii[‘a’-‘z’] where 0<=i<size_of(s)
+Sample Case 0
+s=’aaeiouxa’
+There are two qualifying substrings: s[0:5]=’aaeiou’ and s[1:5]=’aeiou’, so the output is 2.
+Sample Case 1
+s=’axyzaeiou’
+There is only one qualifying substrings: s[4:8]=’aeiou’, so the output is 1.
