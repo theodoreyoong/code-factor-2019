@@ -1,0 +1,32 @@
+Problem 2
+Prison Break
+Programmer Sam is planning to escape from prison! The prison’s gate consists of horizontal and vertical bars that are spaced one unit apart, so the area of each hole between the bars is 1x1. Sam manages to remove certain bars and make some of these holes bigger. Determine the area of the largest hole in the gate after the bars are removed.
+For example, consider the diagram below. The left image depicts the initial prison gate with n=6 horizontal bars and m=6 vertical bars, where the area of the biggest hold is 1x1. The right image depicts that same gate after Sam removes horizontal bar 4 and vertical bar 2, at which point the area of the biggest hole in the bars becomes 2x2=4:
+Function Description
+Complete the function prison in the editor below. The function must return a long integer denoting the area of the biggest hole in the prison gate’s bars.
+prison has the following parameters:
+n: int of the number of horizontal bars initially
+m: int of the number of vertical bars initially
+h[h[0],…,h[x-1]]: an array of integers which are the horizontal bars to remove
+v[v[0],…,v[y-1]]: an array of integers which are the vertical bars to remove
+(x and y are the number of horizontal and vertical bars to remove)
+Constraints
+1<=n,m<=10^5
+0<=x<=n
+0<=y<=m
+1<=h[i]<=n, where 1<=i<=n
+1<=h[j]<=m, where 1<=j<=m
+It is guaranteed that the values in array h are distinct.
+It is guaranteed that the values in array v are distinct.
+Sample Case 0:
+n,m = 3,3 and h,v = [2], [2].
+Bar counts are h=[2] and v=[2]. This means that Sam removes horizontal bar 2 and vertical bar 2 from the gate so it looks like this:
+Returns the area of the biggest hole, which is 4.
+Sample Case 1:
+n,m = 2,2 and h,v = [], [].
+Here Sam is not able to remove any horizontal or vertical bars from the gate, so it looks like this.
+Returns the area of the biggest hole, which is 1.
+Sample Case 2:
+n,m = 3,2 and h,v = [1,2,3], [1,2].
+Bar counts are h=[1,2,3] and v=[1,2]. This means that Sam removes horizontal bars 1, 2 and 3, as well as vertical bars 1 and 2 from the gate so it looks like this:
+Returns the area of the biggest hole, which is 12.
