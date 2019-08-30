@@ -1,0 +1,24 @@
+Problem 6
+The Cost of a Tree
+Given an array of integers, construct a tree. Each node of the tree has either two children or none, in which case it is a leaf node. A leaf node costs 0 to construct. The cost to build a parent node is the product of the maximum leaf values in its left and right sub-trees. Partition the array to minimise the cost of building the entire tree.
+For example, there are n=3 elements in the array [4,6,2]. There are two possible choices to split the array: {4}, {6,2} and {4,6}, {2}. Leaves are green, and parent nodes are blue.
+Working through the first tree in the figure, the left sub-tree is 4 and the right sub-tree is {6,2}. The maxima are 4 and 6, so the root node costs 4x6=24 to create. Now, create leaves for {6,2} with their parent costing 6x2=12 to construct. The entire tree costs 24+12=36.
+If the same analysis is performed on the second tree, the root node costs max({4,6})*2=12 to create, and the node below that on the left costs 4*6=24. Again, the cost is 36. If these two results were different, the minimum would be chosen. The answer is 36.
+Function Description
+Complete the function calculateCost in the editor below. The function must return an integer that represents the minimum cost to construct the tree.
+calculateCost has the following parameter:
+arr[arr[0],…,arr[n-1]]: an array of integers.
+Constraints
+2<=n<=50
+1<=arr[i]<=1000
+Sample Case 0
+arr=[1,2]
+With just two nodes, there is only one choice for partitioning. The cost to build the root node, and hence entire binary tree, is 1x2=2.
+Sample Case 1
+arr=[5,3,1]
+We have two ways to partition the nodes: {5}, {3,1}, and {5,3}, {1}. The respective trees are shown below.
+The cost of the first tree is (5x3)+(3x1)=18, and the cost of the second tree is (5x1)+(5x3)=20. The minimum of the two costs is 18.
+Sample Case 2
+arr=[1,5,3]
+We have two ways to partition the nodes: {1}, {5,3}, and {1,5}, {3}. The respective trees are shown below.
+The cost of the first tree is (1x5)+(3x5)=20, and the cost of the second tree is (5x3)+(5x1)=20. Both scenarios produce a cost of 20.
