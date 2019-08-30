@@ -1,0 +1,17 @@
+Problem 1
+Colouring the blocks
+There are n blocks placed in a row. Each block must be covered with one of three colours available, but no two adjacent blocks can be the same colour. The cost of colouring each block varies and is given in an array. Given the cost of using each colour on each block, determine the minimum cost to colour all of the blocks.
+For example, there are three blocks to colour and the cost to use each colour for each block is given as cost [[1,2,3],[1,2,3],[3,3,1]]. For the first block the cheapest colour is the first colour which costs 1. For the second block, colours cost the same colour but colour 1 cannot be used because it matches the first block. Instead, choose colour 2. For the third block, it can be colour 1 or colour 3. The cheaper is colour 3 at 1 unit. The total cost to colour the blocks is 1+2+1=4.
+Function Description
+Complete the function minPrice in the editor below. The function must return an integer that denotes the minimum cost to colour all of the blocks.
+minPrice has the following parameter:
+cost[cost[0],…cost[n-1]]: an array of integers where cost[i][j] denotes the cost of using the jth colour on the ith block.
+Constraints
+1<=n<=100
+0<=cost[i][j]<=100
+Sample Case 0
+cost = [[1,2,2],[2,2,1],[2,1,2]]
+Cheapest colours of each block are colour 1 for block 0, colour 3 for block 2, and colour 2 for block 3. Total cost is 1.
+Sample Case 1
+cost = [[1,2,2],[2,3,3],[3,3,1]]
+Choose colour 1 for block 0, colour 2 for block 1 and colour 3 for block 2. Even though colour 1 is cheaper to use for block 1, the same colour cannot be used for adjacent blocks. Total cost is 5.
